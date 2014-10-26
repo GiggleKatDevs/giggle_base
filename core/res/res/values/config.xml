@@ -427,12 +427,12 @@
          Any other values will have surprising consequences. -->
     <integer name="config_defaultUiModeType">1</integer>
 
-    <!-- Control the default inverted UI mode to use.
+    <!-- Control the default theme mode for the UI to use.
          One of the following values (See Configuration.java):
-             1 UI_INVERTED_MODE_NORMAL (default)
-             2 UI_INVERTED_MODE_YES
-             3 UI_INVERTED_MODE_NO -->
-    <integer name="config_uiInvertedMode">1</integer>
+             1 UI_THEME_MODE_NORMAL (default)
+             2 UI_THEME_MODE_HOLO_DARK
+             3 UI_THEME_MODE_HOLO_LIGHT -->
+    <integer name="config_uiThemeMode">1</integer>
 
     <!-- Control whether being in the desk dock (and powered) always
          keeps the screen on.  By default it stays on when plugged in to
@@ -1216,8 +1216,10 @@
     <integer name="config_safe_media_volume_index">20</integer>
 
     <!-- Configure mobile network MTU. The standard default is set here but each carrier
-         may have a specific value set in an overlay config.xml file. -->
-    <integer name="config_mobile_mtu">1500</integer>
+         may have a specific value set in an overlay config.xml file. 
+         This really must be 1358 as per 3GPP standards and packet segmentation on the LTE
+         radio.-->
+    <integer name="config_mobile_mtu">1358</integer>
 
     <!-- Whether WiFi display is supported by this device.
          There are many prerequisites for this feature to work correctly.
@@ -1326,6 +1328,10 @@
          the default framework version. If left empty, then the framework version will be used.
          Example: com.google.android.myapp/.resolver.MyResolverActivity  -->
     <string name="config_customResolverActivity"></string>
+
+    <!-- Component name of a custom pre launch check activity to be used instead of default
+         framework version. Currently, there is no default version. -->
+    <string name="config_prelaunchcheckactivity"></string>
 
     <!-- Apps that are authorized to access shared accounts, overridden by product overlays -->
     <string name="config_appsAuthorizedForSharedAccounts">;com.android.settings;</string>

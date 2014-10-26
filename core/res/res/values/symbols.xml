@@ -860,6 +860,7 @@
   <java-symbol type="string" name="config_chooseAccountActivity" />
   <java-symbol type="string" name="config_chooseTypeAndAccountActivity" />
   <java-symbol type="string" name="config_customResolverActivity" />
+  <java-symbol type="string" name="config_prelaunchcheckactivity" />
   <java-symbol type="string" name="config_appsAuthorizedForSharedAccounts" />
   <java-symbol type="string" name="error_message_title" />
   <java-symbol type="string" name="action_bar_home_description_format" />
@@ -1379,7 +1380,6 @@
   <java-symbol type="id" name="zero" />
   <java-symbol type="integer" name="config_carDockRotation" />
   <java-symbol type="integer" name="config_defaultUiModeType" />
-  <java-symbol type="integer" name="config_uiInvertedMode" />
   <java-symbol type="integer" name="config_deskDockRotation" />
   <java-symbol type="integer" name="config_doubleTapOnHomeBehavior" />
   <java-symbol type="integer" name="config_lidKeyboardAccessibility" />
@@ -2093,4 +2093,7 @@
 
   <!-- for wifi auto connection -->
   <java-symbol type="bool" name="wifi_autocon" />
+
+  <!-- UI theme mode -->
+  <java-symbol type="integer" name="config_uiThemeMode" />
 </resources>
